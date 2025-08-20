@@ -34,7 +34,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="nome">Data de Nascimento</label>
-                        <input type="date" class="form-control" name="dt_nascimento">
+                        <input type="date" class="form-control" name="data_nascimento">
                     </div>
                     <button type="submit" class="btn btn-success">Submit</button>
                 </form>
