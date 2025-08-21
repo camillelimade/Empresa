@@ -8,3 +8,9 @@
     if($conn->connect_error){
         die("Deu ruim ". $conn->connect_error);
     }
+    function mensagem($texto ,$tipo){
+        echo "<div class='alert alert-$tipo' role='alert'>
+                $texto 
+            </div>";
+    }
+?>

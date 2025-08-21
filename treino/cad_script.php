@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro com PHP - Camille</title>
-    <link rel="stylesheet" href="emp.css">
+    <title>Script do Cadastro</title>
+    <link rel="stylesheet" href="cad.css">
     <link href="css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
@@ -21,14 +21,15 @@
             $email = $_POST["email"];
             $data_nascimento = $_POST["data_nascimento"];
 
-            $sql = "INSERT INTO `pessoas` ( `nome`, `endereco`, `telefone`, `email`, `data_nasc`) VALUES ('$nome','$endereco','$telefone','$email','data_nascimento')";
+            $sql = "INSERT INTO `pessoas` ( `nome`, `endereco`, `telefone`, `email`, `data_nascimento`) VALUES ('$nome','$endereco','$telefone','$email','$data_nascimento')";
             if( mysqli_query($conn, $sql)){
-                echo "$nome cadastrado com sucesso!";
+                mensagem("$nome cadastrado com sucesso!", 'success');
             }else{
-                echo "$nome não foi cadastrado.";
+                mensagem("Não foi possível cadastrar $nome, tente novamente.", 'danger');
             }
             
             ?>
+            <a href="cad.php" class="btn btn-primary">Voltar</a>
         </div>
 
     </div>
