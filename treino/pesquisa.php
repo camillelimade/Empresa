@@ -11,6 +11,18 @@
 </head>
 
 <body>
+    <?php
+    $pesquisa = $_POST["busca"] ?? ' ';
+    // ?? é conhecido como null coalescing, retorna o primeiro operando se ele existir e não for nulo do contrário retorna o segundo.
+    include "conexao.php";
+    // comando necessario para buscar os dados do banco
+    $sql = "SELECT * FROM pessoas WHERE nome LIKE '%$pesquisa%'";
+    // LIKE indica que a consulta seja efetuada até mesmo com uma pequena parte da variavel 
+    // % indica que seja antes ou depois da variavel pesquisa, depende de onde está posicionada
+    $dados = mysqli_query($conn, $sql);
+    // aqui a ligação é realizada para buscar os dados do banco 
+    ?>
+
     <div class="container" id="corpo1">
         <div class="row">
             <div class="col">
@@ -18,7 +30,8 @@
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
                         <form class="d-flex" role="search" action="pesquisa.php" method="POST">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <input class="form-control me-2" type="search" placeholder="Nome" aria-label="Search"
+                                name="busca" autofocus />
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
                     </div>
@@ -30,28 +43,37 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">Endereço</th>
                                 <th scope="col">Telefone</th>
+                                <th scope="col">Email</th>
                                 <th scope="col">Data de Nascimento</th>
+                                <th scope="col">Funções</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>@social</td>
-                            </tr>
+                            <?php
+                            while ($linha = mysqli_fetch_assoc($dados)) {
+                                $cod_pessoa = $linha['cod_pessoa'];
+                                $nome = $linha['nome'];
+                                $endereco = $linha['endereco'];
+                                $telefone = $linha['telefone'];
+                                $email = $linha['email'];
+                                $data_nascimento = $linha['data_nascimento'];
+                                $data_nascimento = mostra_data($data_nascimento);
+
+                                echo "<tr>
+                                    <th scope='row'>$nome</th>
+                                    <td>$endereco</td>
+                                    <td>$telefone</td>
+                                    <td>$email</td>
+                                    <td>$data_nascimento</td>
+                                    <td>
+                                    <div class='d-grid gap-2 d-md-flex'>
+                                        <a href='cadastro_edit.php?id=$cod_pessoa' class='btn btn-outline-warning'>Editar</a>
+                                        <a href='' class='btn btn-outline-danger'>Excluir</a>
+                                    </div>
+                                    </td>
+                                </tr>";
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
