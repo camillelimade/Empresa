@@ -1,4 +1,4 @@
 # empresa-teste
 CRUD simples com PHP e MySQL para fins empíricos.
 .
-teste 3
+ADVERSIDADES CORRIGIDAS 25/08/2025
