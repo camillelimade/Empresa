@@ -5,6 +5,13 @@
 #corpo1{
     margin-top: 54px;
 }
+.mostra_foto{
+    width: 250px;
+    border-radius: 12px;
+}
+.lista_foto{
+    width: 70px; border-radius: 70px;
+}
 
 
 
@@ -14,7 +21,3 @@
 
 
 
-
-
-
-/*comentario teste*/

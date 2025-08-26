@@ -22,19 +22,19 @@
                     </div>
                     <div class="mb-3">
                         <label for="nome">Endereço</label>
-                        <input type="text" class="form-control" name="endereco">
+                        <input type="text" class="form-control" name="endereco" required>
                     </div>
                     <div class="mb-3">
                         <label for="nome">Telefone</label>
-                        <input type="text" class="form-control" name="telefone">
+                        <input type="text" class="form-control" name="telefone" required>
                     </div>
                     <div class="mb-3">
                         <label for="nome">Email</label>
-                        <input type="email" class="form-control" name="email">
+                        <input type="email" class="form-control" name="email" required>
                     </div>
                     <div class="mb-3">
                         <label for="nome">Data de Nascimento</label>
-                        <input type="date" class="form-control" name="data_nascimento">
+                        <input type="date" class="form-control" name="data_nascimento" required>
                     </div>
                     <div class="mb-3">
                         <label for="foto">Foto</label>

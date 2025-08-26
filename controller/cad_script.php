@@ -25,7 +25,7 @@
 
             $sql = "INSERT INTO `pessoas` ( `nome`, `endereco`, `telefone`, `email`, `data_nascimento`, `foto`) VALUES ('$nome','$endereco','$telefone','$email','$data_nascimento', '$$nome_foto')";
             if( mysqli_query($conn, $sql)){
-                echo "<img src='../img/$nome_foto' title='$nome_foto'>";
+                echo "<img src='../img/$nome_arquivo' title='$nome_foto' class='mostra_foto'>";
                 mensagem("$nome cadastrado com sucesso!", 'success');
             }else{
                 mensagem("Não foi possível cadastrar $nome, tente novamente.", 'danger');
