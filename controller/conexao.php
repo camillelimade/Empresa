@@ -18,4 +18,13 @@
         $escreve = $d[2] . "/" .$d[1] ."/" .$d[0];
         return $escreve;
     }
+    function mover_foto($vetor_foto){
+        if(!$vetor_foto['error']){
+            $nome_arquivo = date('Ymdhms'). ".jpg";
+            move_uploaded_file($vetor_foto['tmp_name'], "../img/". $nome_arquivo);
+            return $nome_arquivo;
+        }else{
+            return 0;
+        }
+    }
 ?>
