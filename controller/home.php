@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="../css/cad.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-
+<style>
+    body{
+        text-align: center;
+    }#corpo1{
+        height: 500px;width:500px;
+    }
+</style>
 <body>
     <div class="container" id="corpo1">
         <div class="row">
@@ -25,9 +31,7 @@
         </div>
 
     </div>
-    <script src="js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

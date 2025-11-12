@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alteração de Cadastro</title>
-    <link rel="stylesheet" href="cad.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/cad.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,16 +19,16 @@
             $endereco = $_POST["endereco"];
             $telefone = $_POST["telefone"];
             $email = $_POST["email"];
-            $data_nascimento = $_POST["data_nascimento"];
+            $data_nasc = $_POST["data_nasc"];
 
-            // $sql = "INSERT INTO `pessoas` ( `nome`, `endereco`, `telefone`, `email`, `data_nascimento`) VALUES ('$nome','$endereco','$telefone','$email','$data_nascimento')";
+            // $sql = "INSERT INTO `pessoas` ( `nome`, `endereco`, `telefone`, `email`, `data_nasc`) VALUES ('$nome','$endereco','$telefone','$email','$data_nascimento')";
             $sql =
                 "UPDATE `pessoas` set 
             `nome` = '$nome', 
             `endereco` = '$endereco', 
             `telefone` = '$telefone', 
             `email` = '$email',
-            `data_nascimento` = '$data_nascimento'
+            `data_nasc` = '$data_nasc'
             WHERE cod_pessoa = $id";
 
             if (mysqli_query($conn, $sql)) {

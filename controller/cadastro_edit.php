@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alteração de Cadastro</title>
-    <link rel="stylesheet" href="cad.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/cad.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +41,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="nome">Data de Nascimento</label>
-                        <input type="date" class="form-control" name="data_nascimento" required value="<?php echo $linha['data_nascimento']; ?>">
+                        <input type="date" class="form-control" name="data_nasc" required value="<?php echo $linha['data_nasc']; ?>">
                     </div>
                     <div class="mb-3">
                         <input type="submit" class="btn btn-success" value="Salvar Alterações">
