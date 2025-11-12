@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Script do Cadastro</title>
-    <link rel="stylesheet" href="cad.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/cad.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -21,17 +21,28 @@
             $email = $_POST["email"];
             $data_nascimento = $_POST["data_nascimento"];
             $foto = $_FILES["foto"];
-            $nome_foto = mover_foto($foto);
 
-            $sql = "INSERT INTO `pessoas` ( `nome`, `endereco`, `telefone`, `email`, `data_nascimento`, `foto`) VALUES ('$nome','$endereco','$telefone','$email','$data_nascimento', '$$nome_foto')";
-            if( mysqli_query($conn, $sql)){
-                echo "<img src='../img/$nome_arquivo' title='$nome_foto' class='mostra_foto'>";
+          
+            if (isset($foto) && $foto['error'] == 0) {
+                $extensao = pathinfo($foto['name'], PATHINFO_EXTENSION);
+                $nome_foto = date("YmdHis") . "." . $extensao;
+                move_uploaded_file($foto['tmp_name'], "../img/" . $nome_foto);
+            } else {
+                $nome_foto = "sem_foto.jpg";
+            }
+           
+
+            $sql = "INSERT INTO `pessoas` (`nome`, `endereco`, `telefone`, `email`, `data_nasc`, `foto`) 
+VALUES ('$nome','$endereco','$telefone','$email','$data_nascimento', '$nome_foto')";
+
+            if (mysqli_query($conn, $sql)) {
+                echo "<img src='../img/$nome_foto' title='$nome_foto' class='mostra_foto'>";
                 mensagem("$nome cadastrado com sucesso!", 'success');
-            }else{
+            } else {
                 mensagem("Não foi possível cadastrar $nome, tente novamente.", 'danger');
             }
-            
             ?>
+
             <a href="cad.php" class="btn btn-primary">Voltar</a>
         </div>
 

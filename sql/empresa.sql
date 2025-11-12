@@ -36,7 +36,8 @@ CREATE TABLE `pessoas` (
   `endereco` varchar(200) NOT NULL,
   `telefone` varchar(16) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `data_nasc` date NOT NULL
+  `data_nasc` date NOT NULL,
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --

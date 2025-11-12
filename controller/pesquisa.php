@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pesquisar - Empresa</title>
-    <link rel="stylesheet" href="cad.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/cad.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
 </head>
 
 <body>
@@ -62,8 +62,8 @@
                                 $endereco = $linha['endereco'];
                                 $telefone = $linha['telefone'];
                                 $email = $linha['email'];
-                                $data_nascimento = $linha['data_nascimento'];
-                                $data_nascimento = mostra_data($data_nascimento);
+                                $data_nasc = $linha['data_nasc'];
+                                $data_nasc = mostra_data($data_nasc);
                                 $foto = $linha['foto'];
 
                                 echo "<tr>
@@ -72,7 +72,7 @@
                                     <td>$endereco</td>
                                     <td>$telefone</td>
                                     <td>$email</td>
-                                    <td>$data_nascimento</td>
+                                    <td>$data_nasc</td>
                                     <td>
                                     <div class='d-grid gap-2 d-md-flex'>
                                         <a href='cadastro_edit.php?id=$cod_pessoa' class='btn btn-warning'>
