@@ -8,12 +8,38 @@
     <link rel="stylesheet" href="../css/cad.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-
+<style>
+    body{
+        text-align: center;
+        background-color: #1c1b1bff;
+    }#corpo1{
+        height: 500px;
+        width:500px;
+        padding-top: 55px;
+    }
+    h1, p, hr, label{
+        color: whitesmoke;
+    }
+    .nav-item{
+        border: solid 0.5px #fff;
+        border-radius: 10px;
+        margin: 6px;
+    }
+    label{
+        text-align: left;
+    }
+    #tit{
+        text-align: left;
+    }
+    form, label{
+        text-align: left;
+    }
+</style>
 <body>
-    <div class="container" id="corpo1">
+    <div class="modal-body" id="abrirCadastro" data-bs-target="#cadastroModal"  style="background-color: #181616ff;">
         <div class="row">
             <div class="col">
-                <h1>Cadastro</h1>
+                <h1 id="tit">Cadastro</h1>
                 <form action="cad_script.php" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="nome">Nome Completo</label>
@@ -45,9 +71,6 @@
             </div>
         </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

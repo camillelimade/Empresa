@@ -20,6 +20,11 @@
     h1, p, hr{
         color: whitesmoke;
     }
+    .nav-item{
+        border: solid 0.5px #fff;
+        border-radius: 10px;
+        margin: 6px;
+    }
 </style>
 <body>
     <nav class="navbar navbar-dark fixed-top" style="background-color: #181616ff;">
@@ -33,8 +38,8 @@
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Lista de Ferramentas</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+      <div class="offcanvas-body" style="background-color: #1c1b1bff;">
+        <ul class="navbar-nav justify-content-left flex-grow-1 pe-3">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -67,13 +72,34 @@
                     <p class="lead">Este é um sistema básico da realização de cadastros. Base de estudos para a criação de sistemas Web com PHP e MySQL.</p>
                     <hr class="my-4">
                     <p>Acesse nossas funcionalidades.</p>
-                    <a href="cad.php" class="btn btn-outline-light btn-lg" role="button">Cadastrar</a>
-                    <a href="pesquisa.php" class="btn btn-outline-light btn-lg" role="button">Pesquisar</a>
+                    <button data-bs-toggle="modal" data-bs-target="#cadastroModal" id="abrirCadastro" class="btn btn-outline-light btn-lg">Cadastrar</button>
+                    <button href="pesquisa.php" class="btn btn-outline-light btn-lg">Pesquisar</button>
                 </div>
             </div>
         </div>
-
     </div>
+<div class="modal fade" id="cadastroModal" tabindex="-1">
+     <div class="modal-dialog modal-dk modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-white" style="background-color: #181616ff;">
+        <h5 class="modal-title">Página de Cadastrar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="conteudoModal" style="background-color: #181616ff;">
+       
+      </div>
+    </div>
+  </div>
+</div>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("abrirCadastro").addEventListener("click", function(){
+            fetch("cad.php")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("conteudoModal").innerHTML = html;
+            });
+        });
+    </script>
 </body>
 </html>
