@@ -31,6 +31,7 @@
         $email = $_POST["email"];
         $data_nascimento = $_POST["data_nascimento"];
         $foto = $_FILES["foto"];
+        $nome_foto = $foto['name'];
 
         if (isset($foto) && $foto['error'] == 0) {
             $extensao = pathinfo($foto['name'], PATHINFO_EXTENSION);

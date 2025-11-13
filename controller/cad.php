@@ -81,7 +81,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="foto">Foto</label>
-                        <input type="file" class="form-control" name="foto" accept=".jpg">
+                        <input type="file" class="form-control" name="foto" accept="image/*">
                     </div>
                     <div id="butEnviar">
                         <button type="submit" class="btn btn-success">Enviar</button>
