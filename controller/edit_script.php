@@ -38,7 +38,7 @@
             }
 
             ?>
-            <a href="cad.php" class="btn btn-primary">Voltar</a>
+            <a href="home.php" class="btn btn-primary">Voltar</a>
         </div>
 
     </div>

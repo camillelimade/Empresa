@@ -80,12 +80,12 @@
     </div>
 <div class="modal fade" id="cadastroModal" tabindex="-1">
      <div class="modal-dialog modal-dk modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" style="background-color: #181616ff;">
       <div class="modal-header text-white" style="background-color: #181616ff;">
-        <h5 class="modal-title">Página de Cadastrar</h5>
+        <h5 class="modal-title" style="border: none;">Formulário de Cadastro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-      <div class="modal-body" id="conteudoModal" style="background-color: #181616ff;">
+      <div class="modal-body" id="conteudoModal" style="background-color: #181616ff; border-radius: 10px;">
        
       </div>
     </div>

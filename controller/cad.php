@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <html lang="pt-br">
 
 <head>
@@ -9,34 +9,52 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <style>
-    body{
+    body {
         text-align: center;
         background-color: #1c1b1bff;
-    }#corpo1{
+    }
+
+    #corpo1 {
         height: 500px;
-        width:500px;
+        width: 500px;
         padding-top: 55px;
     }
-    h1, p, hr, label{
+
+    h1,
+    p,
+    hr,
+    label {
         color: whitesmoke;
     }
-    .nav-item{
+
+    .nav-item {
         border: solid 0.5px #fff;
         border-radius: 10px;
         margin: 6px;
     }
-    label{
+
+    label {
         text-align: left;
     }
-    #tit{
+
+    #tit {
         text-align: left;
     }
-    form, label{
+
+    form,
+    label {
         text-align: left;
+    }
+
+    #butEnviar {
+        text-align: center;justify-content: center; 
+        padding-top: 13px;
     }
 </style>
+
 <body>
-    <div class="modal-body" id="abrirCadastro" data-bs-target="#cadastroModal"  style="background-color: #181616ff;">
+    <div class="modal-body" id="abrirCadastro" data-bs-target="#cadastroModal"
+        style="background-color: #181616ff; border-radius: 10px;">
         <div class="row">
             <div class="col">
                 <h1 id="tit">Cadastro</h1>
@@ -65,12 +83,14 @@
                         <label for="foto">Foto</label>
                         <input type="file" class="form-control" name="foto" accept=".jpg">
                     </div>
-                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <div id="butEnviar">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
                 </form><br>
-                <a href="home.php" class="btn btn-dark">Inicio</a>
             </div>
         </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
