@@ -73,7 +73,7 @@
                     <hr class="my-4">
                     <p>Acesse nossas funcionalidades.</p>
                     <button data-bs-toggle="modal" data-bs-target="#cadastroModal" id="abrirCadastro" class="btn btn-outline-light btn-lg">Cadastrar</button>
-                    <button href="pesquisa.php" class="btn btn-outline-light btn-lg">Pesquisar</button>
+                    <a href="pesquisa.php" class="btn btn-outline-light btn-lg">Pesquisar</a>
                 </div>
             </div>
         </div>

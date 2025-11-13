@@ -1,6 +1,6 @@
 <?php
-    $server = "127.0.0.1:3307";
-    // mudar isso pra "localhost" na crede !!!
+    $server = "localhost";
+    // mudar isso pra "127.0.0.1:3307" em casa !!!
     $user = "root";
     $pass = "";
     $bd = "empresa";

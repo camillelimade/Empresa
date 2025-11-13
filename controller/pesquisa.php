@@ -7,7 +7,7 @@
     <title>Pesquisar - Empresa</title>
     <link rel="stylesheet" href="../css/cad.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    
+
 </head>
 
 <body>
@@ -22,15 +22,30 @@
     $dados = mysqli_query($conn, $sql);
     // aqui a ligação é realizada para buscar os dados do banco 
     ?>
+<style>
+     body{
+        background-color: #1c1b1bff;
 
+    }#tit{
+        color: whitesmoke;
+    }
+    th, td{
+        background-color: #1c1b1bff !important;
+        text-align: center;
+    }
+</style>
     <div class="container" id="corpo1">
         <div class="row">
             <div class="col">
-                <h1>Pesquisar</h1>
-                <nav class="navbar bg-body-tertiary">
+                <a href="home.php" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+</svg></a>
+                <br><br>
+                <h1 id="tit">Pesquisar</h1>
+                <nav class="navbar bg-body-dark">
                     <div class="container-fluid">
                         <form class="d-flex" role="search" action="pesquisa.php" method="POST">
-                            <input class="form-control me-2" type="search" placeholder="Nome" aria-label="Search"
+                            <input class="form-control me-2 " type="search" placeholder="Nome" aria-label="Search"
                                 name="busca" autofocus />
                             <button class="btn btn-outline-success" type="submit"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -39,11 +54,12 @@
                                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                                 </svg></button>
                         </form>
+                    <br><br><br>
                     </div>
                 </nav>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
+                <div class="table-responsive table-bordered mt-3">
+                    <table class="table table-dark table-hover " style="background-color: #1c1b1bff;">
+                        <thead  style="background-color: #1c1b1bff; ">
                             <tr>
                                 <th scope="col">Foto</th>
                                 <th scope="col">Nome</th>
@@ -54,8 +70,9 @@
                                 <th scope="col">Funções</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody style="background-color: #1c1b1bff; border-radius: 16px;">
                             <?php
+                            
                             while ($linha = mysqli_fetch_assoc($dados)) {
                                 $cod_pessoa = $linha['cod_pessoa'];
                                 $nome = $linha['nome'];
@@ -65,9 +82,9 @@
                                 $data_nasc = $linha['data_nasc'];
                                 $data_nasc = mostra_data($data_nasc);
                                 $foto = $linha['foto'];
-
+                                
                                 echo "<tr>
-                                    <th scope='row'><img src='img/$foto' class='lista_foto'></th>
+                                    <th scope='row'><img src='img/<?php echo $nome_foto; ?>'></th>
                                     <th scope='row'>$nome</th>
                                     <td>$endereco</td>
                                     <td>$telefone</td>
@@ -95,7 +112,6 @@
                         </tbody>
                     </table>
                     <br>
-                    <a href="home.php" class="btn btn-dark">Inicio</a>
                 </div>
             </div>
         </div>
@@ -132,7 +148,7 @@
     </script>
     <script src="../js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-        </script>
+    </script>
 </body>
 
 </html>

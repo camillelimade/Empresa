@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="../css/cad.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
+<style>
+    body{
+        background-color: #1c1b1bff;
 
+    }
+</style>
 <body>
     <?php
     include "conexao.php";

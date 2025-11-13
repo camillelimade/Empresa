@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,10 @@
             object-fit: cover;
             display: block;
             margin: 0 auto;
+        }
+
+        body {
+            background-color: #1c1b1bff;
         }
     </style>
 </head>
@@ -49,7 +54,7 @@
             $classe_alerta = "danger";
         }
         ?>
-        
+
         <!-- Botão invisível que dispara o modal -->
         <button type="button" id="abrirModal" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#resultadoModal">
             Abrir Modal
@@ -58,7 +63,7 @@
         <!-- Modal -->
         <div class="modal fade" id="resultadoModal" tabindex="-1" aria-labelledby="resultadoModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content" style="background-color: #181616ff;">
                     <div class="modal-header bg-<?php echo $classe_alerta; ?> text-white">
                         <h5 class="modal-title" id="resultadoModalLabel">
                             <?php echo ($classe_alerta == "success") ? "Sucesso!" : "Erro!"; ?>
@@ -66,13 +71,13 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="../img/<?php echo $nome_foto; ?>" alt="Foto" class="mostra_foto mb-3">
+                        <img src="../img/<?php echo $nome_foto; ?>" alt="Foto" class="mostra_foto mb-3" style="border-radius: 50%;">
                         <div class="alert alert-<?php echo $classe_alerta; ?>">
                             <?php echo $mensagem; ?>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a href="home.php" class="btn btn-primary">Voltar</a>
+                        <a href="home.php" class="btn btn-light">Voltar</a>
                     </div>
                 </div>
             </div>
@@ -87,4 +92,5 @@
         });
     </script>
 </body>
+
 </html>
