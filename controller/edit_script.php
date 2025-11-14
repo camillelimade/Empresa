@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="../css/cad.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<style>
+    body{
+        background-color: #1c1b1bff;
+    }
+    h1, label,text {
+        color: whitesmoke;
+    }
+</style>
 <body>
     <div class="container" id="corpo1">
         <div class="row">
@@ -38,12 +45,11 @@
             }
 
             ?>
-            <a href="home.php" class="btn btn-primary">Voltar</a>
+            <a href="home.php" class="btn btn-success">Voltar</a>
         </div>
 
     </div>
-    <script src="js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    <script src="../js/bootstrap.bundle.min.js">
         </script>
 </body>
 

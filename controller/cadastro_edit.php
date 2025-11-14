@@ -11,7 +11,9 @@
 <style>
     body{
         background-color: #1c1b1bff;
-
+    }
+    h1, label,text {
+        color: whitesmoke;
     }
 </style>
 <body>
@@ -26,7 +28,8 @@
     <div class="container" id="corpo1">
         <div class="row">
             <div class="col">
-                <h1>Cadastro</h1>
+                <h1>Edição de Dados</h1>
+                <br>
                 <form action="edit_script.php" method="POST">
                     <div class="mb-3">
                         <label for="nome">Nome Completo</label>
