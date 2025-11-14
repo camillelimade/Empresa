@@ -8,15 +8,26 @@
     <link rel="stylesheet" href="../css/cad.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<style>
+        body{
+        background-color: #1c1b1bff;
+    }
+</style>
 <body>
     <div class="container" id="corpo1">
         <div class="row">
             <?php
+
             include "conexao.php";
-            $id = $_POST["id"];
-            $nome = $_POST["nome"];
-            $sql = "DELETE from `pessoas` WHERE cod_pessoa = $id";
+            $id = $_POST["id"] ?? null;
+            $nome = $_POST["nome"] ?? null;
+            
+            if(!$id){
+                mensagem("ID não recebido. Exclusão cancelada.", "danger");
+                echo '<a href="cad.php" class="btn btn-success> Voltar </a>"';
+                exit;
+            }
+            $sql = "DELETE FROM `pessoas` WHERE cod_pessoa = $id";
 
             if (mysqli_query($conn, $sql)) {
                 mensagem("$nome excluido com sucesso!", 'success');
@@ -25,7 +36,7 @@
             }
             ?>
             
-            <a href="cad.php" class="btn btn-primary">Voltar</a>
+            <a href="pesquisa.php" class="btn btn-success">Voltar</a>
         </div>
 
     </div>
