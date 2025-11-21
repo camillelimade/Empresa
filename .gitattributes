@@ -1,5 +1,7 @@
-vendor/* linguist-vendored
-node_modules/* linguist-vendored
 *.php linguist-language=PHP
 *.hh linguist-language=PHP
 *.hack linguist-language=PHP
+
+
+vendor/** linguist-vendored
+node_modules/** linguist-vendored
