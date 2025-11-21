@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alteração de Cadastro</title>
-    <link rel="stylesheet" href="../css/cad.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/cad.css">
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
 </head>
 <style>
         body{
@@ -40,7 +40,7 @@
         </div>
 
     </div>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

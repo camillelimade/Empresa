@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Script do Cadastro</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <style>
         .mostra_foto {
             width: 150px;
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
     <script>
         // Abre o modal automaticamente após o carregamento da página
         window.addEventListener('DOMContentLoaded', function() {

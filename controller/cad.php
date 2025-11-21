@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../css/cad.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/cad.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
 </head>
 <style>
     body {
